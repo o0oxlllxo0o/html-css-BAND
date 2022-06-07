@@ -1,0 +1,543 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
+}
+.clear {
+  clear: both;
+}
+
+button {
+  border: none;
+}
+.display-block {
+  display: block !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-white {
+  color: white !important;
+}
+
+#wrapper {
+  overflow: auto;
+}
+
+.row {
+  margin: 0 -16px;
+  padding: 4px;
+}
+
+.row:after {
+  clear: both;
+}
+
+.col {
+  float: left;
+  padding: 0 8px;
+}
+
+.col-2 {
+  width: 50%;
+}
+
+.col-3 {
+  width: calc(100% / 3);
+}
+
+.col-1 {
+  width: 100%;
+}
+.pad {
+  padding: 0 8px;
+}
+
+
+#header {
+  background-color: black;
+  height: 46px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#nav {
+  display: inline-block;
+}
+
+#nav li {
+  display: inline-block;
+  position: relative;
+}
+
+#nav li:hover a {
+  display: inline-block;
+  color: black;
+  background-color: #ccc;
+}
+
+#nav .sub-nav {
+  position: absolute;
+  display: none;
+  list-style: none;
+  box-shadow: 0 0 10px #ccc;
+}
+
+#nav li:hover .sub-nav a,
+#nav .sub-nav li {
+  display: block;
+  color: black;
+  background-color: white;
+  height: 38px;
+}
+
+#nav li:hover .sub-nav {
+  display: block;
+  color: black;
+  background-color: white;
+}
+
+#nav .sub-nav li:hover a,
+#nav .sub-nav li:hover a {
+  display: block;
+  color: black;
+  background-color: #ccc;
+  line-height: 38px;
+}
+
+#nav li a {
+  color: white;
+  text-decoration: none;
+  line-height: 46px;
+  padding: 0 24px 0 24px;
+}
+
+#nav > li > a {
+  text-transform: uppercase;
+}
+
+#nav li i {
+  font-size: 16px;
+}
+.bar-btn{
+  display: none;
+  position: absolute;
+  top:0;
+  right: 0;
+}
+.bar-btn,
+.search-btn {
+  float: right;
+  padding: 0 15px;
+  line-height: 46px;
+  cursor: pointer;
+}
+.bar-btn i,
+.search-btn i {
+  font-size: 20px;
+  color: white;
+}
+
+.bar-btn:hover
+{
+  background-color: #ccc;
+}
+
+.bar-btn:hover i{
+  color:#000
+}
+
+.search-btn:hover {
+  background-color: red;
+}
+
+#slider {
+  background-color: #333;
+  margin-top: 46px;
+  padding-top: 50%;
+  background-image: url(https://www.w3schools.com/w3images/la.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+#slider .text-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 32px;
+}
+#slider .text-content .text-heading {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+#slider .text-content .text-description {
+  font-size: 15px;
+}
+
+#content {
+}
+#content .section-content {
+  padding: 64px 0;
+  width: 800px;
+  margin: auto;
+}
+
+#content .section-content .section-heading {
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 16px;
+  letter-spacing: 4px;
+}
+
+#content .section-content .section-sub-heading {
+  font-style: italic;
+  font-size: 16px;
+  color: gray;
+  text-align: center;
+  margin: 32px 0;
+}
+
+#content .section-content .about-text {
+  font-size: 16px;
+  text-align: justify;
+  margin-bottom: 34px;
+}
+
+#content .members-list {
+  padding: 32px 0;
+}
+#content .member-item {
+  /* float: left;
+  text-align: center;
+  width: calc(100% / 3); */
+  padding: 0 8px;
+}
+#content .member-name {
+  margin-bottom: 15px;
+}
+
+#content .member-img {
+  padding: 0 4px;
+  border-radius: 5px;
+}
+
+.tour-section {
+  background-color: black;
+}
+
+.tour-section .tickets-list {
+  background-color: white;
+  list-style: none;
+  color: #333;
+}
+.tickets-list li {
+  padding: 8px 16px;
+  border-bottom: 1px solid #ddd;
+  color: #757575;
+}
+
+.tickets-list .sold-out {
+  background-color: red;
+  color: white;
+  padding: 3px 7px;
+  margin-left: 16px;
+}
+
+.tickets-list .quantity {
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  padding: 0 8px;
+  float: right;
+  margin-right: 5px;
+}
+
+.place-list {
+  padding: 32px 8px;
+}
+
+.place-list .place-item {
+  padding: 0 8px;
+  margin-bottom: 16px;
+}
+
+.place-body {
+  color: black;
+  background-color: white;
+  padding: 16px;
+  font-size: 15px;
+}
+
+.place-list .place-img {
+  width: 100%;
+  display: block;
+}
+
+.place-img:hover {
+  opacity: 0.6;
+}
+
+.place-time {
+  color: #ccc;
+  margin-top: 15px;
+}
+
+.place-description {
+  margin: 15px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.buy-ticket {
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 16px;
+  background-color: #000000;
+  color: #ffff;
+}
+
+.buy-ticket:hover {
+  background-color: #757575;
+  color: #f3f0f0fa;
+}
+#footer {
+  font-size: 16px;
+  text-align: center;
+  padding: 64px 30px;
+  color: #a3a3a3;
+}
+#footer i {
+  font-size: 24px;
+}
+#footer .footer-about {
+  margin: 16px 0;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+.modal-container {
+  margin: auto;
+  width: 50%;
+  margin-top: 10%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 4px #ccc;
+  animation: modalOpen 0.3s;
+}
+
+.modal-input {
+  display: block;
+}
+
+header {
+  font-size: 30px;
+  color: white;
+  background-color: #009688;
+  padding: 16px 32px;
+  text-align: center;
+}
+.modal-heading {
+  margin: 10px 0;
+}
+
+.modal-body {
+  background-color: white;
+  padding: 0 16px;
+}
+
+.modal-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.modal-lable {
+  margin: 15px 0;
+  display: inline-block;
+}
+
+.modal-container header .btn-close {
+  float: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-weight: 100;
+  padding: 0px 16px 10px 16px;
+  background-color: transparent;
+  color: white;
+}
+
+.modal-container .btn-pay {
+  background-color: #009688;
+  padding: 16px 16px;
+  display: inline-block;
+  margin: 15px 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.modal-container .btn-pay:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+.modal-footer .btn-close {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 16px 0;
+}
+
+.modal-container .btn-close:hover {
+  background-color: #ccc;
+  color: black;
+  cursor: pointer;
+}
+
+.help {
+  float: right;
+  margin: 15px 0;
+}
+
+.help a {
+  color: #2196f3;
+}
+
+@keyframes modalOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-content {
+  margin-top: 48px;
+}
+
+.contact-info {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.contact-form {
+  font-size: 15px;
+}
+
+.contact-form .form-control {
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+}
+
+.contact-form .btn-send {
+  padding: 8px 16px;
+  background-color: black;
+  color: white;
+  float: right;
+  margin-top: 10px;
+  margin-right: -4px;
+}
+
+.contact-form .btn-send:hover {
+  background-color: #ccc;
+  color: #000;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000000;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+@media screen and (min-width:740px) and (max-width:1028px) {
+  #content .section-content{
+    width: 700px;
+  }
+}
+
+@media screen and (max-width:739px) {
+  #header{
+    overflow: hidden;
+  }
+
+  .search-btn{
+    display: none;
+  }
+
+  .bar-btn{
+    display: block;
+  }
+
+  #nav > li,#nav,  #nav > li a {
+    display: block;
+    background-color:black;
+  }
+
+  #nav li:hover a{
+    display: block;
+  }
+
+  /* #nav li:last-child{
+    display: none;
+  } */
+  #content .section-content{
+    width: 100%;
+    padding:16px 8px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .member-item, .place-item, .contact-info, .contact-form {
+    width: 100%;
+    padding:  16px;
+  }
+  
+  .contact-form .col{
+    width: 100%;
+  }
+
+  .section-content{
+    margin:0 30px 0  30px ;
+  }
+}
